@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Lobby</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="center">
+
+  <div class="glass-card">
+    <h2>Enter Your Name</h2>
+
+    <input id="playerName" placeholder="Your Name">
+    <input id="friendName" placeholder="Friend Name (for Friend Mode)">
+
+    <button onclick="playAI()">Play vs AI</button>
+    <button onclick="playFriend()">Play with Friend</button>
+
+
+    <hr>
+
+    <input id="roomCode" placeholder="Room Code">
+    <button onclick="joinRoom()">Join Game</button>
+  </div>
+
+  <script src="js/lobby.js"></script>
+</body>
+</html>

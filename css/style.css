@@ -1,0 +1,166 @@
+/* ===== SAFE BASE RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f2027;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* ===== APP LAYOUT ===== */
+.app-container {
+  text-align: center;
+}
+
+/* ===== GAME CARD ===== */
+.game-card {
+  background: #111;
+  padding: 20px 25px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.25);
+}
+
+/* ===== BOARD ===== */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 12px;
+  justify-content: center;
+  margin: 15px auto;
+  position: relative;
+  z-index: 5;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  border-radius: 12px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid cyan;
+  pointer-events: auto;
+}
+
+/* ===== BUTTON ===== */
+button {
+  margin: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid cyan;
+  background: black;
+  color: cyan;
+  cursor: pointer;
+}
+
+
+/* =========================
+   ANIMATION 1: CELL INTERACTION
+========================= */
+
+.cell {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px cyan;
+}
+
+.cell:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================
+   ANIMATION 2: X / O POP
+========================= */
+
+.cell.X,
+.cell.O {
+  animation: popIn 0.25s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cell.X {
+  color: cyan;
+  text-shadow: 0 0 12px cyan;
+}
+
+.cell.O {
+  color: magenta;
+  text-shadow: 0 0 12px magenta;
+}
+
+
+/* =========================
+   ANIMATION 3: WIN GLOW
+========================= */
+
+.win-cell {
+  animation: winPulse 1s infinite;
+}
+
+@keyframes winPulse {
+  0% {
+    box-shadow: 0 0 8px gold;
+  }
+  50% {
+    box-shadow: 0 0 25px orange;
+  }
+  100% {
+    box-shadow: 0 0 8px gold;
+  }
+}
+
+/* =========================
+   ANIMATION 4: BOARD SHAKE
+========================= */
+
+.board.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+/* =========================
+   ANIMATION 5: RESTART PULSE
+========================= */
+
+.board.restart {
+  animation: restartPulse 0.3s;
+}
+
+@keyframes restartPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
