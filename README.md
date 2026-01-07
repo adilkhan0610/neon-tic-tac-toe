@@ -1,27 +1,38 @@
-# ⚡ Neon Tic Tac Toe Game
+# ⚡ Neon Tic Tac Toe
 
-A crazy, animated, neon-style Tic Tac Toe game built using:
-- HTML
-- CSS
-- JavaScript
+A premium, animated Tic Tac Toe game built using **HTML, CSS, and JavaScript**.
+Designed with a **company-grade UI**, smart AI, and multiple game modes.
 
-## 🚀 Features
-- Neon glowing UI
-- Smooth animations
-- Winning screen shake
-- Responsive design
-- Clean code
-- 🤖 Smart AI opponent
-- AI blocks and wins intelligently
-- Smooth thinking delay for realism
+## 🚀 Live Demo
+👉 https://adilkhan0610.github.io/neon-tic-tac-toe/
+
+## 🎮 Features
+- 🤖 Smart AI opponent (win & block logic)
+- 🧑‍🤝‍🧑 Friend Mode (local multiplayer)
+- ✨ Smooth animations & neon effects
+- ⭐ Persistent points system
+- 📜 Match history tracking
+- 🔄 Restart & replay support
+- 🎨 Clean, centered, premium UI
+
+## 🛠 Tech Stack
+- HTML5
+- CSS3 (Animations, Flex/Grid, UI polish)
+- JavaScript (Game logic, AI, LocalStorage)
+
+## 📂 Project Structure
+neon-tic-tac-toe/
+│── index.html
+│── lobby.html
+│── game.html
+│── history.html
+│── css/
+│ └── style.css
+│── js/
+│ ├── game.js
+│ ├── lobby.js
+│ └── history.js
 
 
-## 📸 Preview
-(Add screenshots here)
-
-## 🛠 How to Run
-1. Clone the repo
-2. Open index.html in browser
-
-## 👨‍💻 Author
-Adil Khan
+## 👨‍💻 Made By
+**Adil Khan**
